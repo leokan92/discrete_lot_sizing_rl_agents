@@ -1,0 +1,18 @@
+{
+    "time_horizon":100,
+    "n_items": 2,
+    "n_machines": 1,
+    "initial_setup": [0],
+    "machine_production": [[3,3]],
+    "max_inventory_level": [10, 10],
+    "initial_inventory": [0, 0],
+    "holding_costs": [1, 1],
+    "lost_sales_costs": [10, 10],
+    "demand_distribution": {
+        "name": "probability_mass_function",
+        "vals": [0,1,2,3,4],
+        "probs": [0.08, 0.261,0.348,0.232,0.079]
+    },
+    "setup_costs": [[1, 1]],
+    "setup_loss": [[1, 1]]
+}
