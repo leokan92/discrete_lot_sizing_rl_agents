@@ -147,6 +147,5 @@ python -m test_files.2items_1machine
 
 # References:
 
-This project was builded in partneship with Politecnico di Torino Researchers. The base environment here employed is can be also acessed in [dicrete_lot_sizing](https://github.com/EdoF90/discrete_lot_sizing)
-
+This project was built in partnership with Politecnico di Torino Researchers. The base environment here employed can also be accessed in [dicrete_lot_sizing](https://github.com/EdoF90/discrete_lot_sizing)
 
