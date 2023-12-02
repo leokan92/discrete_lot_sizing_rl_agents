@@ -1,0 +1,9 @@
+{
+    "discount_rate": 0.9,
+    "experiment_name": "test",
+    "parallelization": false,
+    "model_name": "PPO",
+    "multiagent": false,
+    "branching_factors": [10, 2, 2],
+    "regressor_name": "Linear Regression"
+}
