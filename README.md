@@ -5,19 +5,50 @@ The project implements the Discrete Lot Sizing Problem (DLSP).
 It is organized in the following modules:
 
 - models:  it contains the math models
-- agents
-- envs
+- agents : it contains different implementations of DRL, ADP, and heuristic methosd so solve the MDP model
+- envs: The environment implamentations
+- logs: logs for the models
+- results: results folder to save the simulation results
+- cfg_sol: it contains the solution setting for the multi-stage
+- cfg_env: it contains different environment configurations
 
 the configuration file is:
 
 ~~~ json
 {
-    "time_horizon": 3,
-    "n_items": 1,
-    "n_machines": 1,"initial_setup": [0],
-    "machine_production": [[10]],
+    "time_horizon":100,
+    "n_items": 2,
+    "n_machines": 1,
+    "initial_setup": [0],
+    "machine_production": [[3,3]],
+    "max_inventory_level": [10, 10],
+    "initial_inventory": [0, 0],
+    "holding_costs": [1, 1],
+    "lost_sales_costs": [10, 20],
+    "demand_distribution": {
+        "name": "probability_mass_function",
+        "vals": [0,1,2],
+        "probs": [0.341,0.58,0.079]
+    },
+    "demand_distribution_example_item_specific_uniform": {
+        "name": "item_specific_uniform",
+        "distributions": [
+            {
+                "name": "probability_mass_function",    
+                "vals": [0,1,2],
+                "probs": [0.341,0.58,0.079]
+            },{
+                "name": "probability_mass_function",    
+                "vals": [0,1,2,3],
+                "probs": [0.241,0.18,0.179,0.1 ]
+            }
+        ]  
+    },
+    "setup_costs": [[1, 1]],
+    "setup_loss": [[1, 1]]
 }
 ~~~
+
 
 Flow of operations of time t:
 
@@ -104,20 +135,18 @@ $$
 - in *simplePlant* we consider that the setup costs and setup time to go in the idlle state is 0.
 
   
-### ToDo
+## How to play test this code:
 
-[] controlla su più istanze
+You can access ``test_files`` and choose or create a file to configure the experiment, including new models and changing the environment configurations.
 
-[] check consistenza dei tempi. Per es. il 2 stadi non funziona perchè inizio in t=0 e la decisione di cambio si stato influenza t=1 istante in cui non produco (dovrei considerare $x_{ij}^{a}$ in Eq 9)
+To execute an experiment, simply run the following:
 
-[] Interpretazione univoca dello 0 (stato per le macchine o produzione item 0?  Attulamente gestito da env.)
+```
+python -m test_files.2items_1machine
+```
 
-[] vettorializzare modelli
+# References:
+
+This project was builded in partneship with Politecnico di Torino Researchers. The base environment here employed is can be also acessed in [dicrete_lot_sizing](https://github.com/EdoF90/discrete_lot_sizing)
 
 
-
-# Code
-
-main files descriptions:
-
-- *multistage_vs_exact_vi* compares the multistave vs the exact value iteration.
