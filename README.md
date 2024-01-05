@@ -149,3 +149,20 @@ python -m test_files.2items_1machine
 
 This project was built in partnership with Politecnico di Torino Researchers. The base environment here employed can also be accessed in [dicrete_lot_sizing](https://github.com/EdoF90/discrete_lot_sizing)
 
+To reference this work use these information:
+
+```
+@article{FELIZARDO2024123036,
+title = {Reinforcement learning approaches for the stochastic discrete lot-sizing problem on parallel machines},
+journal = {Expert Systems with Applications},
+pages = {123036},
+year = {2024},
+issn = {0957-4174},
+doi = {https://doi.org/10.1016/j.eswa.2023.123036},
+url = {https://www.sciencedirect.com/science/article/pii/S0957417423035388},
+author = {Leonardo Kanashiro Felizardo and Edoardo Fadda and Emilio Del-Moral-Hernandez and Paolo Brandimarte},
+keywords = {Dynamic programming, Stochastic programming, Multi-agent systems, Machine learning, Reinforcement Learning},
+abstract = {This paper addresses the stochastic discrete lot-sizing problem on parallel machines, which is a computationally challenging problem also for relatively small instances. We propose two heuristics to deal with it by leveraging reinforcement learning. In particular, we propose a technique based on approximate value iteration around post-decision state variables and one based on multi-agent reinforcement learning. We compare these two approaches with other reinforcement learning methods and more classical solution techniques, showing their effectiveness in addressing realistic size instances.}
+}
+```
+
