@@ -152,6 +152,8 @@ python -m test_files.2items_1machine
 
 This project was built in partnership with Politecnico di Torino Researchers. The base environment here employed can also be accessed in [dicrete_lot_sizing](https://github.com/EdoF90/discrete_lot_sizing)
 
+The paper can be downloaded in [Expert Systems with Applications](https://www.sciencedirect.com/science/article/pii/S0957417423035388)
+
 To reference this work use these information:
 
 ```
