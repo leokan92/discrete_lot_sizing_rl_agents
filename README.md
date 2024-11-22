@@ -100,10 +100,13 @@ Consider a tree and the following notation:
 - $a(s)$ is the immediate predecessor for node $s$
 
 The model is
+
 $$
 \min \sum_{s} p^{[s]} \sum_{i=1}^n (h_iI_{i}^{[s]}+\rho_i z_{i}^{[s]}+\sum_{j=1}^mf_i\delta_{ij}^{[s]})
 $$
+
 s.t.
+
 $$
 I_{i}^{[s]} - z_{i}^{[s]} = I_{i}^{[a(s)]} + \sum_{j=1}^m(p_ix_{ij}^{[a(s)]}-l_i\delta_{ij}^{[a(s)]}) -d_{i}^{[s]}\ \ i \in [n], s \in \mathcal{S}-\{0\}
 $$
